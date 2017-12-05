@@ -1,0 +1,88 @@
+In below code im trying to iterate array values and assign orderPeriod value based upon values and showing in alert box.
+
+Ex :- if current date is 1-15 assign orderPeriod = 'FH' else  orderPeriod  = 'LH';
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+var date = new Date();
+ var dayDate = date.getDate();
+
+function myFunction() {
+   
+
+const arr = ['a', 'b', 'c'];
+
+arr.forEach(function(element) {
+    console.log(element);
+});
+
+// array
+
+
+var FH= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+  
+  
+  console.log(FH);
+
+var LH = [16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+
+var orderPeriod;
+
+
+const items = ['item1', 'item2', 'item3'];
+const copy = [];
+
+for (let i=0; i<FH.length; i++) {
+
+ alert('dayDate is'+ dayDate);
+  //copy.push(items[i])
+  if(FH[i] === dayDate)
+  {
+  
+  orderPeriod = 'FH';
+  
+  alert('orderPeriod is' + orderPeriod);
+  
+  }
+  else
+  {
+  
+  for(let j=0; j<LH.length;j++) {
+  
+    if(LH[j] === datDate)
+	{
+	
+	  orderPeriod = 'LH';
+	  
+	  alert('orderPeriod is' + orderPeriod);
+	   
+	   break;
+	
+	}
+  
+  
+  }
+  
+  
+  }
+}
+
+
+
+var array = ['a', 'b', 'c'];
+
+for (var i in array) {
+  console.log(array[i]);
+}
+
+
+
+
+}
+myFunction();
+</script>
